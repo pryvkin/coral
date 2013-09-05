@@ -1,0 +1,40 @@
+==================
+CoRAL dependencies
+==================
+  libgsl
+  bigWigToBedGraph (a UCSC kent utility)
+  bedtools
+  samtools
+  RNAfold
+  ruby
+  R
+
+# Install gsl On a Debian-based system:
+sudo apt-get install libgsl0-dev
+  
+# Install bigWigToBedGraph on any 64-bit linux:
+#   (UCSC also provides MacOS binaries)
+wget http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bigWigToBedGraph
+sudo cp bigWigToBedGraph /usr/local/bin/  # or elsewhere in your $PATH
+
+# Install bedtools
+wget https://bedtools.googlecode.com/files/BEDTools.v2.17.0.tar.gz
+tar -zxvf BEDTools.v2.17.0.tar.gz
+cd bedtools-2.17.0
+make
+sudo cp bin/* /usr/local/bin/   # or elsewhere in your $PATH
+
+==============
+Building CoRAL
+==============
+make
+
+================
+Installing CoRAL
+================
+
+sudo cp bin/* /usr/local/bin/  # or elsewhere in your $PATH
+# -- OR --
+# add the following to your rc (e.g., ~/.bashrc):
+#   PATH=$PATH:CORALDIR/bin
+# where CORALDIR is the location of CoRAL

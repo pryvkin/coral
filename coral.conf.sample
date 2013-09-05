@@ -1,0 +1,14 @@
+# minimum and maximum lengths of trimmed reads in the dataset
+min_trimmed_read_len=14
+max_trimmed_read_len=30
+
+# minimum read coverage to consider a region for calling as a
+#  transcribed locus
+export seg_threshold=10
+
+# parameters for the segmentation algorithm
+export seg_maxgap=44
+export seg_minrun=$min_trimmed_read_len
+
+# parameters for antisense feature
+export antisense_min_reads=2
